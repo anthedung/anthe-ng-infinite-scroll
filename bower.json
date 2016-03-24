@@ -1,6 +1,6 @@
 {
-    "name": "ngInfiniteScroll",
-    "main": "build/ng-infinite-scroll.js",
+    "name": "ngAntheInfiniteScroll",
+    "main": "build/anthe-ng-infinite-scroll.js",
     "ignore": [
         "**/.*",
         "_*",
