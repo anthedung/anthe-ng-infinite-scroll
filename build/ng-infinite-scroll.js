@@ -65,14 +65,8 @@ mod.directive('infiniteScroll', [
           if (useDocumentBottom) {
             elementBottom = height((elem[0].ownerDocument || elem[0].document).documentElement);
           }
-          remaining = elementBottom - containerBottom;
-          remaining = elementBottom - containerBottom;
-          var footer = jQuery('div#anthe-footer');
-          var spacer = jQuery('div.spacer');
-          shouldScroll = (elementBottom >= height(container) * scrollDistance);
-          
-          console.log('elementBottom >= height(container) + 1: ' + (elementBottom >= height(container) + 1))
-          
+          shouldScroll = (offsetTop(elem) + height(elem) >= height(container) * scrollDistance);
+
           if (shouldScroll) {
             checkWhenEnabled = true;
             if (scrollEnabled) {
