@@ -69,7 +69,8 @@ mod.directive('infiniteScroll', [
           remaining = elementBottom - containerBottom;
           var footer = jQuery('div#anthe-footer');
           var spacer = jQuery('div.spacer');
-          shouldScroll = (elementBottom >= height(container));
+          shouldScroll = (elementBottom >= height(container) * scrollDistance);
+          
           console.log('elementBottom >= height(container) + 1: ' + (elementBottom >= height(container) + 1))
           
           if (shouldScroll) {
